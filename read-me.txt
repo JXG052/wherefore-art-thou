@@ -1,0 +1,75 @@
+//  WHEREFORE ART THOU
+        Make a function that looks through an array of objects (first argument) 
+        and returns an array of all objects that have matching name and value pairs (second argument). 
+        Each name and value pair of the source object has to be present in the object from the collection
+        if it is to be included in the returned array.
+
+For example, if the first argument is 
+    [{ first: "Romeo", last: "Montague" }, { first: "Mercutio", last: null }, { first: "Tybalt", last: "Capulet" }], 
+        and the second argument is 
+    { last: "Capulet" }, 
+        then you must return the third object from the array (the first argument),
+        because it contains the name and its value, that was passed on as the second argument.
+
+
+// INPUT:
+//  First Argument = array (collection)
+//  Second Argument = name and value pairs (source)
+
+// OUTPUT:
+// 1. Array of objects that have matching name and value pairs (second argument)
+
+// Do you understand the problem???
+//  receive an argument and an array. look in an array of objects for that argument. return the full object 
+
+// OPTIONS:
+//  .indexOf()
+//  GOOGLE:
+//      "looking through an object for key value pairs"
+//      Returns:
+//      getValues(collectionObj) =
+[
+  [ 'Romeo', 'Montague' ],
+  [ 'Mercutio', null ],
+  [ 'Tybalt', 'Capulet' ]
+]
+//          an array of arrays - look through this to find if argument passed exists 
+//          will need a for loop to go through each array   
+//          if 
+
+// Now I have a function that tells me true or false if the string passed to it exists in the array 
+// if true I want to return the object/array that it matched with  - could i do this by returning i?
+//          yes but turns out its only searching through element i in each array
+                // Solution: I can either open up the current array or create a second loop
+                // googling alternatives to indexOf - no luck
+                // Open up Array: This worked using .flat() however doesn't really help as i wouldn't correspond 
+                // create a 2nd for Loop:
+
+            // 2nd Loop worked
+            // loop still fails for lowercase:
+                // Going to ignore this for now. the core function works. 
+
+    //1.0 It works
+        // WHAT NOW: 
+            // Put it back together. the problem has been broken down so that we now know that if the sourceArray contains a key that 
+                matches a string argument (i.e. the search value) - the functions will return the index. 
+
+            // How do we take this input and put it back together to return the output. i.e the correct object. 
+                Solution: Objects are stored in the original array as arr[i]
+                            We know i. What happens when we return arr[i]
+                //: This Worked!!! the output is now  an array of the values. 
+            // How do we convert array of 2 values to return the object with key value pair: 
+                return obj[i] with object being the original not the valuesArr
+            // THIS WORKED: We didn't need to convert the array. just return the original object using i as the reference
+    //1.1 Push to github
+        // WHAT NOW:
+            // I've been working on this for too long and there's too many seperate functions.
+            // not a bad thing as all functions are running seperately 
+            // need to find a way to link them all back together    
+
+            // BUGS: 
+                // lowercase
+                // current return in for loop is permanently set to collectionObj
+                        // FIX: 
+
+
